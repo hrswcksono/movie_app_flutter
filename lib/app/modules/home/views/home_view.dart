@@ -9,13 +9,26 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HomeView'),
-        centerTitle: true,
+        backgroundColor: Colors.white,
+        title: Text(
+          'Star Movie',
+          style: TextStyle(color: Colors.black, fontFamily: 'SFPro'),
+        ),
+        centerTitle: false,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.search),
+            color: Colors.black,
+            iconSize: 35,
+          )
+        ],
       ),
       body: Center(
         child: Text(
           'HomeView is working',
-          style: TextStyle(fontSize: 20),
+          style:
+              TextStyle(color: Colors.black, fontSize: 30, fontFamily: 'SFPro'),
         ),
       ),
     );
