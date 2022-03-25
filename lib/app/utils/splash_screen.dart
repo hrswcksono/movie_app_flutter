@@ -9,14 +9,7 @@ class SplashScreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Color.fromRGBO(227, 36, 60, 1),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('assets/images/Logo.png'),
-            ],
-          ),
-        ),
+        body: Center(child: Image.asset("assets/images/Logo.png")),
       ),
     );
   }

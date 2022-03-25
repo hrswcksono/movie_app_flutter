@@ -28,67 +28,63 @@ class _TabBarPageState extends State<TabBarPage>
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.only(top: 10),
-        child: Container(
-          height: Get.height,
-          child: Column(
-            children: [
-              // SizedBox(height: 20),
-              Container(
-                // height: 50,
-                width: Get.width * 0.9,
-                decoration: BoxDecoration(
-                    border: Border.all(color: Color.fromRGBO(205, 207, 211, 1)),
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(50)),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(5),
-                      child: TabBar(
-                        unselectedLabelColor: Color.fromRGBO(205, 207, 211, 1),
-                        labelColor: Colors.white,
-                        indicatorColor: Colors.white,
-                        indicatorWeight: 1,
-                        indicator: BoxDecoration(
-                          color: Color.fromRGBO(229, 25, 55, 1),
-                          borderRadius: BorderRadius.circular(100),
-                        ),
-                        controller: tabController,
-                        tabs: [
-                          Tab(
-                            child: Text(
-                              'Now Showing',
-                              style:
-                                  TextStyle(fontFamily: 'SFPro', fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Coming Soon',
-                              style:
-                                  TextStyle(fontFamily: 'SFPro', fontSize: 16),
-                            ),
-                          ),
-                        ],
+    return Padding(
+      padding: EdgeInsets.only(top: 10),
+      child: Container(
+        height: Get.height,
+        child: Column(
+          children: [
+            // SizedBox(height: 20),
+            Container(
+              // height: 50,
+              width: Get.width * 0.9,
+              decoration: BoxDecoration(
+                  border: Border.all(color: Color.fromRGBO(205, 207, 211, 1)),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(50)),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(5),
+                    child: TabBar(
+                      unselectedLabelColor: Color.fromRGBO(205, 207, 211, 1),
+                      labelColor: Colors.white,
+                      indicatorColor: Colors.white,
+                      indicatorWeight: 0.5,
+                      indicator: BoxDecoration(
+                        color: Color.fromRGBO(229, 25, 55, 1),
+                        borderRadius: BorderRadius.circular(100),
                       ),
+                      controller: tabController,
+                      tabs: [
+                        Tab(
+                          child: Text(
+                            'Now Showing',
+                            style: TextStyle(fontFamily: 'SFPro', fontSize: 16),
+                          ),
+                        ),
+                        Tab(
+                          child: Text(
+                            'Coming Soon',
+                            style: TextStyle(fontFamily: 'SFPro', fontSize: 16),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-              Expanded(
-                child: TabBarView(
-                  controller: tabController,
-                  children: [
-                    NowplayingView(),
-                    CoomingsoonView(),
-                  ],
-                ),
-              )
-            ],
-          ),
+            ),
+            Expanded(
+              child: TabBarView(
+                controller: tabController,
+                children: [
+                  NowplayingView(),
+                  CoomingsoonView(),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
