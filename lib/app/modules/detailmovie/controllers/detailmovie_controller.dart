@@ -1,9 +1,7 @@
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  List<RxBool> botNav = [false.obs, false.obs, false.obs, false.obs];
+class DetailmovieController extends GetxController {
+  //TODO: Implement DetailmovieController
 
   final count = 0.obs;
   @override

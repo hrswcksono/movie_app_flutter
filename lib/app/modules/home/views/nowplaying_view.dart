@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:movie_app_flutter/app/modules/home/widget/itemgridhome.dart';
+import 'package:movie_app_flutter/app/modules/home/views/itemgridhome.dart';
 
 class NowplayingView extends GetView {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.only(top: 10, right: 10, left: 10),
       child: Scaffold(
         body: MediaQuery.removePadding(
           context: context,
@@ -18,7 +18,7 @@ class NowplayingView extends GetView {
                   crossAxisCount: 2,
                   mainAxisSpacing: 10.0,
                   crossAxisSpacing: 10.0,
-                  childAspectRatio: Get.width / Get.height * 1),
+                  childAspectRatio: Get.width / Get.height * 1.1),
               itemCount: 10,
               itemBuilder: (BuildContext context, int index) {
                 return ItemGridHome();

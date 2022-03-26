@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:movie_app_flutter/app/modules/detailmovie/bindings/detailmovie_binding.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/views/detailmovie_view.dart';
 import 'package:movie_app_flutter/app/modules/home/bindings/home_binding.dart';
 import 'package:movie_app_flutter/app/modules/home/views/home_view.dart';
 
@@ -15,6 +17,11 @@ class AppPages {
       name: _Paths.HOME,
       page: () => HomeView(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAILMOVIE,
+      page: () => DetailmovieView(),
+      binding: DetailmovieBinding(),
     ),
   ];
 }

@@ -5,7 +5,7 @@ import 'package:movie_app_flutter/app/utils/splash_screen.dart';
 
 import 'app/routes/app_pages.dart';
 
-void main() async {
+void main() {
   runApp(FutureBuilder(
       future: Future.delayed(
         Duration(seconds: 3),
