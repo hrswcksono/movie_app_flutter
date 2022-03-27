@@ -18,7 +18,7 @@ class BotNavBar extends GetView<BaseController> {
               ? Container(
                   child: Image.asset(
                     image!.replaceAll('.png', '') + "-selected.png",
-                    height: Get.width * 0.07,
+                    height: Get.width * 0.06,
                   ),
                 )
               : InkWell(
@@ -31,7 +31,7 @@ class BotNavBar extends GetView<BaseController> {
                   child: Container(
                     child: Image.asset(
                       image!,
-                      height: Get.width * 0.07,
+                      height: Get.width * 0.06,
                     ),
                   ),
                 ));

@@ -20,6 +20,26 @@ class BaseView extends GetView<BaseController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text(
+          'Star Movie',
+          style: TextStyle(
+            color: Colors.black,
+            fontFamily: 'SFPro',
+            fontSize: 28,
+          ),
+        ),
+        centerTitle: false,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.search),
+            color: Colors.black,
+            iconSize: 35,
+          )
+        ],
+      ),
       body: Obx((() {
         return _pageOptions.elementAt(controller.basePage.value);
       })),
