@@ -37,25 +37,31 @@ class ListCastCrew extends StatelessWidget {
                   fontSize: Get.width * 0.04,
                   color: Colors.black),
             ),
-            Spacer(
-              flex: 3,
-            ),
-            Text(
-              "...",
-              style: TextStyle(
-                  fontFamily: 'SFPro',
-                  fontSize: Get.width * 0.05,
-                  color: Color.fromRGBO(183, 187, 191, 1)),
-            ),
-            SizedBox(
-              width: 30,
-            ),
-            Text(
-              film!,
-              style: TextStyle(
-                  fontFamily: 'SFPro',
-                  fontSize: Get.width * 0.04,
-                  color: Color.fromRGBO(183, 187, 191, 1)),
+            Spacer(),
+            Container(
+              width: Get.width * 0.3,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "...",
+                    style: TextStyle(
+                        fontFamily: 'SFPro',
+                        fontSize: Get.width * 0.05,
+                        color: Color.fromRGBO(183, 187, 191, 1)),
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Text(
+                    film!,
+                    style: TextStyle(
+                        fontFamily: 'SFPro',
+                        fontSize: Get.width * 0.04,
+                        color: Color.fromRGBO(183, 187, 191, 1)),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
