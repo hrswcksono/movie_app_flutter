@@ -50,7 +50,6 @@ class BaseView extends GetView<BaseController> {
         ),
         height: Get.height * 0.078,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             BotNavBar(
               image: "assets/icons/movie-reel.png",

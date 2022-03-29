@@ -15,23 +15,25 @@ class BotNavBar extends GetView<BaseController> {
           duration: Duration(milliseconds: 2000),
           curve: Curves.bounceInOut,
           child: stateValue.value
-              ? Container(
+              ? Expanded(
                   child: Image.asset(
                     image!.replaceAll('.png', '') + "-selected.png",
                     height: Get.width * 0.06,
                   ),
                 )
-              : InkWell(
-                  onTap: () {
-                    // onTap;
-                    controller.resetPage();
-                    stateValue.toggle();
-                    controller.movePage();
-                  },
-                  child: Container(
-                    child: Image.asset(
-                      image!,
-                      height: Get.width * 0.06,
+              : Expanded(
+                  child: InkWell(
+                    onTap: () {
+                      // onTap;
+                      controller.resetPage();
+                      stateValue.toggle();
+                      controller.movePage();
+                    },
+                    child: Expanded(
+                      child: Image.asset(
+                        image!,
+                        height: Get.width * 0.06,
+                      ),
                     ),
                   ),
                 ));
