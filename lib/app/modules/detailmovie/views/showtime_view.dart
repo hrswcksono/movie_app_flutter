@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/notification_controller.dart';
-
-class NotificationView extends GetView<NotificationController> {
+class ShowtimeView extends GetView {
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'NotificationView is working',
+        'ShowtimeView is working',
         style: TextStyle(fontSize: 20),
       ),
     );

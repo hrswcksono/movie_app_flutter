@@ -44,6 +44,10 @@ class BaseView extends GetView<BaseController> {
         return _pageOptions.elementAt(controller.basePage.value);
       })),
       bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          border:
+              Border(top: BorderSide(color: Color.fromRGBO(205, 207, 211, 1))),
+        ),
         height: Get.height * 0.078,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
