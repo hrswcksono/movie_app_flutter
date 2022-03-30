@@ -21,40 +21,38 @@ class BaseView extends GetView<BaseController> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx((() {
-      return Scaffold(
-        appBar: BaseAppBar(
-          title: Constant.titleAppBar[controller.basePage.value],
-        ),
-        body: _pageOptions.elementAt(controller.basePage.value),
-        bottomNavigationBar: Container(
-          decoration: BoxDecoration(
-            border: Border(
-                top: BorderSide(color: Color.fromRGBO(205, 207, 211, 1))),
+    return Obx((() => Scaffold(
+          appBar: BaseAppBar(
+            title: Constant.titleAppBar[controller.basePage.value],
           ),
-          height: Get.height * 0.078,
-          child: Row(
-            children: [
-              BotNavBar(
-                image: "assets/icons/movie-reel.png",
-                stateValue: controller.botNav[0],
-              ),
-              BotNavBar(
-                image: "assets/icons/event-ticket.png",
-                stateValue: controller.botNav[1],
-              ),
-              BotNavBar(
-                image: "assets/icons/alarm.png",
-                stateValue: controller.botNav[2],
-              ),
-              BotNavBar(
-                image: "assets/icons/user.png",
-                stateValue: controller.botNav[3],
-              ),
-            ],
+          body: _pageOptions.elementAt(controller.basePage.value),
+          bottomNavigationBar: Container(
+            decoration: BoxDecoration(
+              border: Border(
+                  top: BorderSide(color: Color.fromRGBO(205, 207, 211, 1))),
+            ),
+            height: Get.height * 0.078,
+            child: Row(
+              children: [
+                BotNavBar(
+                  image: "assets/icons/movie-reel.png",
+                  stateValue: controller.botNav[0],
+                ),
+                BotNavBar(
+                  image: "assets/icons/event-ticket.png",
+                  stateValue: controller.botNav[1],
+                ),
+                BotNavBar(
+                  image: "assets/icons/alarm.png",
+                  stateValue: controller.botNav[2],
+                ),
+                BotNavBar(
+                  image: "assets/icons/user.png",
+                  stateValue: controller.botNav[3],
+                ),
+              ],
+            ),
           ),
-        ),
-      );
-    }));
+        )));
   }
 }

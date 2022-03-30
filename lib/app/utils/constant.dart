@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Constant {
   static var listFilm = ["qwertyuoaj", "dasdsadas", "dasdasds", "dasdasdasd"];
 
