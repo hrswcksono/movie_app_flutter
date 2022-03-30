@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Constant {
   static var listFilm = ["qwertyuoaj", "dasdsadas", "dasdasds", "dasdasdasd"];
 
@@ -10,4 +12,6 @@ class Constant {
     'assets/images/list_photo_3.png',
     'assets/images/list_photo_1.png'
   ];
+
+  static var titleAppBar = ['Star Movie', 'Tickets', 'Notification', 'Profile'];
 }

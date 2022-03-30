@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/widgets/list_cast_crew.dart';
-import 'package:movie_app_flutter/app/modules/detailmovie/widgets/list_photos.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/widgets/item_list_photos.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/widgets/sub_detail.dart';
 import 'package:movie_app_flutter/app/utils/constant.dart';
 
@@ -66,7 +66,7 @@ class DetailView extends GetView {
                 padding: EdgeInsets.only(top: 5),
                 itemCount: 5,
                 itemBuilder: (BuildContext context, int index) =>
-                    ListPhotos(image: Constant.listPhoto[index]),
+                    ItemListPhotos(image: Constant.listPhoto[index]),
               ),
             ),
             SubDetail(

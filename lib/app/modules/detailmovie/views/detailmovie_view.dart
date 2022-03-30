@@ -40,9 +40,14 @@ class DetailmovieView extends GetView<DetailmovieController> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Image.asset(
-                          'assets/icons/back.png',
-                          height: Get.width * 0.065,
+                        InkWell(
+                          onTap: () {
+                            Get.back();
+                          },
+                          child: Image.asset(
+                            'assets/icons/back.png',
+                            height: Get.width * 0.065,
+                          ),
                         ),
                         Image.asset(
                           'assets/icons/share.png',

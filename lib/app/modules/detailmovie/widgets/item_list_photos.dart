@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class ListPhotos extends StatelessWidget {
-  ListPhotos({required this.image});
+class ItemListPhotos extends StatelessWidget {
+  ItemListPhotos({required this.image});
   final String? image;
 
   @override
