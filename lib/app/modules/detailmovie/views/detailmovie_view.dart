@@ -95,14 +95,14 @@ class DetailmovieView extends GetView<DetailmovieController> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("4.6/5  ",
+                    Text("4/5  ",
                         style: TextStyle(
                             fontFamily: 'SFPro',
                             fontSize: Get.width * 0.07,
                             fontWeight: FontWeight.bold)),
                     GFRating(
                       size: Get.width * 0.07,
-                      value: 3,
+                      value: 4,
                       color: Color.fromRGBO(248, 196, 47, 1),
                       borderColor: Color.fromRGBO(248, 196, 47, 1),
                       onChanged: (value) {

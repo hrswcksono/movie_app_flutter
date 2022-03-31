@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/views/detail/cast_and_crew_view.dart';
 
 class DetailmovieController extends GetxController {
   //TODO: Implement DetailmovieController

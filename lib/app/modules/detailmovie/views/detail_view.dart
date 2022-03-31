@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/controllers/detailmovie_controller.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/views/detail/blog_view.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/views/detail/cast_and_crew_view.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/views/detail/photos_view.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/views/detail/videos_view.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/widgets/list_cast_crew.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/widgets/item_list_photos.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/widgets/sub_detail.dart';
 import 'package:movie_app_flutter/app/utils/constant.dart';
 
 class DetailView extends GetView {
+  final detailC = Get.put(DetailmovieController());
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -40,8 +47,10 @@ class DetailView extends GetView {
               height: Get.width * 0.035,
             ),
             SubDetail(
-              title: 'Cast & Crew',
-            ),
+                title: 'Cast & Crew',
+                button: () {
+                  Get.to(CastAndCrewView());
+                }),
             ListView.builder(
                 padding: const EdgeInsets.all(0),
                 itemCount: 4,
@@ -56,6 +65,9 @@ class DetailView extends GetView {
                 }),
             SubDetail(
               title: 'Photos',
+              button: () {
+                Get.to(PhotosView());
+              },
             ),
             SizedBox(
               height: Get.height * 0.1,
@@ -71,9 +83,15 @@ class DetailView extends GetView {
             ),
             SubDetail(
               title: 'Videos',
+              button: () {
+                Get.to(VideosView());
+              },
             ),
             SubDetail(
               title: 'Blogs About This Film',
+              button: () {
+                Get.to(BlogView());
+              },
             ),
           ],
         ),

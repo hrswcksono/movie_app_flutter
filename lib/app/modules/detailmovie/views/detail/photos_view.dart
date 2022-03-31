@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/views/detail/app_bar_subdetail.dart';
 
-class VideosView extends GetView {
+class PhotosView extends GetView {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('VideosView'),
-        centerTitle: true,
-      ),
+      appBar: AppBarSubdetail(title: 'Photos'),
       body: Center(
         child: Text(
-          'VideosView is working',
+          'PhotosView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),
