@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/views/detail/cast_and_crew_view.dart';
 
@@ -6,6 +7,9 @@ class DetailmovieController extends GetxController {
 
   var tabBar = [true.obs, false.obs, false.obs];
   var indexPage = 0.obs;
+  var showAppbar = true.obs;
+
+  ScrollController scrollC = ScrollController();
 
   void resetPage() {
     for (var iter in tabBar) {
