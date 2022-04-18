@@ -20,7 +20,7 @@ class ItemGridHome extends StatelessWidget {
               child: Image.asset(
                 "assets/images/john_wick.png",
                 fit: BoxFit.contain,
-                width: Get.height * 0.5,
+                // width: Get.height * 0.5,
               ),
             ),
             GFRating(

@@ -28,6 +28,22 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
             iconSize: 35,
           )
         ],
+        if (title! == 'Profile') ...[
+          Container(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: EdgeInsets.only(right: 8.0),
+              child: Text(
+                'Sign Up',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'SFPro',
+                  fontSize: 17,
+                ),
+              ),
+            ),
+          )
+        ]
       ],
     );
   }
