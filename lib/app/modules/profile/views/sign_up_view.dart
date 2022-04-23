@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:movie_app_flutter/app/modules/profile/views/profile_view.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/profile_app_bar.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/profile_button.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/profile_text_field.dart';
@@ -56,9 +57,14 @@ class SignUpView extends GetView {
             ),
             ProfileTextField(image: 'assets/icons/icon_password.png'),
             Spacer(
-              flex: 2,
+              flex: 3,
             ),
-            ProfileButton(title: 'Create Account')
+            ProfileButton(
+              title: 'Create Account',
+              button: () {
+                Get.to(ProfileView());
+              },
+            )
           ],
         ),
       ),

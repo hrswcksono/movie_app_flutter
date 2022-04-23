@@ -1,11 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movie_app_flutter/app/modules/profile/views/profile_signed_view.dart';
 
 class ProfileButton extends StatelessWidget {
-  ProfileButton({required this.title});
+  ProfileButton({required this.title, required this.button, Key? key})
+      : super(key: key);
 
   final String title;
+  final void Function() button;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,9 @@ class ProfileButton extends StatelessWidget {
           primary: Color.fromRGBO(229, 25, 55, 1), // background
           onPrimary: Colors.white, // foreground
         ),
-        onPressed: () {},
+        onPressed: () {
+          Get.to(ProfileSignedView());
+        },
         child: Text(
           title,
           style: TextStyle(

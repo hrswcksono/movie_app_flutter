@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:movie_app_flutter/app/modules/profile/views/profile_signed_view.dart';
+import 'package:movie_app_flutter/app/modules/profile/widgets/profile_button.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/profile_text_field.dart';
 
 import '../controllers/profile_controller.dart';
@@ -45,25 +47,11 @@ class ProfileView extends GetView<ProfileController> {
           ),
           ProfileTextField(image: 'assets/icons/icon_password.png'),
           Spacer(),
-          SizedBox(
-            height: 47,
-            width: Get.width,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromRGBO(229, 25, 55, 1), // background
-                onPrimary: Colors.white, // foreground
-              ),
-              onPressed: () {},
-              child: Text(
-                'Login',
-                style: TextStyle(
-                  fontFamily: 'SFPro',
-                  fontSize: 18,
-                  color: Colors.white,
-                  // fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
+          ProfileButton(
+            title: 'Login',
+            button: () {
+              Get.to(ProfileSignedView());
+            },
           ),
           Spacer(
             flex: 2,
