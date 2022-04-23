@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:movie_app_flutter/app/modules/profile/views/account_information_view.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/profile_app_bar.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/profile_signed_button.dart';
 
@@ -127,9 +128,14 @@ class ProfileSignedView extends GetView {
           ],
         ),
         Spacer(),
-        ProfileSignedButton(
-          image: 'assets/icons/account_information.png',
-          text: 'Account Information',
+        InkWell(
+          onTap: (() {
+            Get.to(AccountInformationView());
+          }),
+          child: ProfileSignedButton(
+            image: 'assets/icons/account_information.png',
+            text: 'Account Information',
+          ),
         ),
         Spacer(),
         ProfileSignedButton(
