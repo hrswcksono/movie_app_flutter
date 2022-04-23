@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/views/detail_view.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/views/reviews/reviews_view.dart';
-import 'package:movie_app_flutter/app/modules/detailmovie/views/showtime_view.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/views/showtime/showtime_view.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/widgets/tabbar_detail.dart';
 
 import '../controllers/detailmovie_controller.dart';

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:movie_app_flutter/app/modules/profile/widgets/profile_text_field.dart';
 
 import '../controllers/profile_controller.dart';
 
@@ -26,29 +27,7 @@ class ProfileView extends GetView<ProfileController> {
           SizedBox(
             height: 6,
           ),
-          Container(
-            height: Get.height * 0.07,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                  color: Color.fromRGBO(207, 209, 213, 1), // set border color
-                  width: 1.0), // set border width
-              borderRadius: BorderRadius.all(
-                  Radius.circular(5.0)), // set rounded corner radius
-            ),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.all(Get.height * 0.02),
-                prefixIcon: Padding(
-                  padding: EdgeInsets.only(top: 17.0, bottom: 17.0),
-                  child: Image.asset(
-                    'assets/icons/icon_user.png',
-                  ),
-                ),
-              ),
-            ),
-          ),
+          ProfileTextField(image: 'assets/icons/icon_user.png'),
           SizedBox(
             height: 20,
           ),
@@ -64,29 +43,7 @@ class ProfileView extends GetView<ProfileController> {
           SizedBox(
             height: 6,
           ),
-          Container(
-            height: Get.height * 0.07,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                  color: Color.fromRGBO(207, 209, 213, 1), // set border color
-                  width: 1.0), // set border width
-              borderRadius: BorderRadius.all(
-                  Radius.circular(5.0)), // set rounded corner radius
-            ),
-            child: TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.all(Get.height * 0.02),
-                prefixIcon: Padding(
-                  padding: EdgeInsets.only(top: 17.0, bottom: 17.0),
-                  child: Image.asset(
-                    'assets/icons/icon_password.png',
-                  ),
-                ),
-              ),
-            ),
-          ),
+          ProfileTextField(image: 'assets/icons/icon_password.png'),
           Spacer(),
           SizedBox(
             height: 47,

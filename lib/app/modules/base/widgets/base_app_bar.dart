@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:movie_app_flutter/app/modules/profile/views/sign_up_view.dart';
 
 class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
   BaseAppBar({required this.title});
@@ -33,12 +35,17 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
             alignment: Alignment.center,
             child: Padding(
               padding: EdgeInsets.only(right: 8.0),
-              child: Text(
-                'Sign Up',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'SFPro',
-                  fontSize: 17,
+              child: InkWell(
+                onTap: (() {
+                  Get.to(SignUpView());
+                }),
+                child: Text(
+                  'Sign Up',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'SFPro',
+                    fontSize: 17,
+                  ),
                 ),
               ),
             ),
