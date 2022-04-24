@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:movie_app_flutter/app/modules/profile/views/account_information_view.dart';
+import 'package:movie_app_flutter/app/modules/profile/views/transaction_history_view.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/profile_app_bar.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/profile_signed_button.dart';
 
@@ -138,9 +139,14 @@ class ProfileSignedView extends GetView {
           ),
         ),
         Spacer(),
-        ProfileSignedButton(
-          image: 'assets/icons/transaction_history.png',
-          text: 'Transaction History',
+        InkWell(
+          onTap: (() {
+            Get.to(TransactionHistoryView());
+          }),
+          child: ProfileSignedButton(
+            image: 'assets/icons/transaction_history.png',
+            text: 'Transaction History',
+          ),
         ),
         Spacer(),
         ProfileSignedButton(
