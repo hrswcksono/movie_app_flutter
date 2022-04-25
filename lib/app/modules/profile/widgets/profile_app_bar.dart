@@ -11,6 +11,9 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return AppBar(
+      iconTheme: IconThemeData(
+        color: Colors.black, //change your color here
+      ),
       backgroundColor: Colors.white,
       title: Text(
         title,

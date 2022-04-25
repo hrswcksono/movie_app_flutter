@@ -12,4 +12,22 @@ class Constant {
   ];
 
   static var titleAppBar = ['Star Movie', 'Tickets', 'Notification', 'Profile'];
+
+  static var listTime = [
+    '8:30 AM',
+    '9:30 AM',
+    '10:30 AM',
+    '11:30 AM',
+    '12:30 AM',
+    '13:30 AM',
+  ];
+
+  static var listDistance = [
+    30.0,
+    40.0,
+    50.0,
+    60.0,
+    45.0,
+    80.0,
+  ];
 }

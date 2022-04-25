@@ -11,7 +11,7 @@ class ItemDate extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Colors.yellow,
+        color: Color.fromRGBO(229, 25, 55, 1),
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),

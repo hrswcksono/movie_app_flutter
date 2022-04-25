@@ -4,14 +4,15 @@ import 'package:get/get.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/card_text_view.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/detail_card.dart';
 import 'package:movie_app_flutter/app/modules/profile/widgets/item_transaction.dart';
+import 'package:movie_app_flutter/app/modules/profile/widgets/profile_app_bar.dart';
 
 class TransactionHistoryView extends GetView {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('TransactionHistoryView'),
-        centerTitle: true,
+      appBar: ProfileAppBar(
+        center: true,
+        title: 'Transaction History',
       ),
       body: Padding(
         padding: EdgeInsets.only(

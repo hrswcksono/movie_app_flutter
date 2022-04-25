@@ -18,7 +18,11 @@ class DetailView extends GetView {
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
-        padding: EdgeInsets.only(top: Get.height * 0.013),
+        padding: EdgeInsets.only(
+          top: Get.height * 0.013,
+          left: Get.width * 0.065,
+          right: Get.width * 0.065,
+        ),
         child: Column(
           children: [
             Align(

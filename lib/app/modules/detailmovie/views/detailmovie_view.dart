@@ -74,8 +74,7 @@ class DetailmovieView extends GetView<DetailmovieController> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(
-                      left: Get.width * 0.065, right: Get.width * 0.065),
+                  padding: EdgeInsets.symmetric(horizontal: Get.width * 0.065),
                   child: Column(
                     children: [
                       SizedBox(
@@ -130,13 +129,12 @@ class DetailmovieView extends GetView<DetailmovieController> {
                         height: Get.height * 0.025,
                       ),
                       TabBarDetail(),
-                      Obx((() {
-                        return _pageOptions
-                            .elementAt(controller.indexPage.value);
-                      })),
                     ],
                   ),
                 ),
+                Obx((() {
+                  return _pageOptions.elementAt(controller.indexPage.value);
+                })),
               ],
             ),
           ),

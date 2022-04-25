@@ -23,7 +23,6 @@ class ItemTransaction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Padding(
       padding: EdgeInsets.only(
         top: 5,
@@ -78,11 +77,10 @@ class ItemTransaction extends StatelessWidget {
                   Text(
                     title,
                     style: TextStyle(
-                        fontFamily: 'SFPRO',
-                        fontSize: 17,
-                        color: Color.fromRGBO(135, 141, 149, 1)
-                        // fontWeight: FontWeight.bold,
-                        ),
+                      fontFamily: 'SFPRO',
+                      fontSize: 17,
+                      color: Color.fromRGBO(135, 141, 149, 1),
+                    ),
                   ),
                 ],
               ),
@@ -102,11 +100,10 @@ class ItemTransaction extends StatelessWidget {
                   Text(
                     date,
                     style: TextStyle(
-                        fontFamily: 'SFPRO',
-                        fontSize: 17,
-                        color: Color.fromRGBO(135, 141, 149, 1)
-                        // fontWeight: FontWeight.bold,
-                        ),
+                      fontFamily: 'SFPRO',
+                      fontSize: 17,
+                      color: Color.fromRGBO(135, 141, 149, 1),
+                    ),
                   ),
                 ],
               )
