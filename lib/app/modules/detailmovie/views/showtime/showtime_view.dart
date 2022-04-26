@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/controllers/detailmovie_controller.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/views/showtime/item_date.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/views/showtime/item_time.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/views/showtime/showtime_button.dart';
 import 'package:movie_app_flutter/app/utils/constant.dart';
 
 class ShowtimeView extends GetView {
@@ -179,7 +180,11 @@ class ShowtimeView extends GetView {
                 children: children,
               ),
               SizedBox(
-                height: 10,
+                height: 25,
+              ),
+              ShowtimeButton(title: 'Get Ticket', button: () {}),
+              SizedBox(
+                height: 30,
               ),
             ],
           ),

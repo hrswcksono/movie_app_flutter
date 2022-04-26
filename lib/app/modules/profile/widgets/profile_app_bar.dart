@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
   ProfileAppBar({required this.title, required this.center});
@@ -22,6 +23,13 @@ class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
           fontFamily: 'SFPro',
           fontSize: 20,
         ),
+      ),
+      leading: IconButton(
+        icon: Image.asset(
+          'assets/icons/back_black.png',
+          height: 20,
+        ),
+        onPressed: () => Get.back(),
       ),
       centerTitle: center,
       // actions: [],
