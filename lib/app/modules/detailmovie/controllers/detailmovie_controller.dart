@@ -8,6 +8,19 @@ class DetailmovieController extends GetxController {
   var tabBar = [true.obs, false.obs, false.obs];
   var indexPage = 0.obs;
   var showAppbar = true.obs;
+  var stateDate = [
+    true.obs,
+    true.obs,
+    true.obs,
+    true.obs,
+    true.obs,
+    true.obs,
+    true.obs,
+  ];
+
+  // RxBool dateChoosen(RxBool temp) {
+  //   return
+  // }
 
   ScrollController scrollC = ScrollController();
 

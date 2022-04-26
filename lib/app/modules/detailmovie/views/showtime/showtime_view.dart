@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import 'package:get/get.dart';
+import 'package:movie_app_flutter/app/modules/detailmovie/controllers/detailmovie_controller.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/views/showtime/item_date.dart';
 import 'package:movie_app_flutter/app/modules/detailmovie/views/showtime/item_time.dart';
 import 'package:movie_app_flutter/app/utils/constant.dart';
 
 class ShowtimeView extends GetView {
+  final detailC = Get.put(DetailmovieController());
+
   @override
   Widget build(BuildContext context) {
     final children = <Widget>[];
@@ -58,7 +61,10 @@ class ShowtimeView extends GetView {
                 BuildContext context,
                 int index,
               ) =>
-                  ItemDate(),
+                  ItemDate(
+                    state: detailC.stateDate[index],
+                    index: index,
+                  ),
               separatorBuilder: (_, __) => SizedBox(
                     width: 10,
                   ),
@@ -128,6 +134,33 @@ class ShowtimeView extends GetView {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "2D",
+                  style: TextStyle(
+                    color: Color.fromRGBO(135, 141, 149, 1),
+                    fontFamily: 'SFPro',
+                    fontSize: Get.width * 0.05,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              StaggeredGrid.count(
+                crossAxisCount: 3,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 20,
+                children: children,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "lmax",
                   style: TextStyle(
                     color: Color.fromRGBO(135, 141, 149, 1),
                     fontFamily: 'SFPro',
